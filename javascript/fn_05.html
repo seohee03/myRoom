@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "우리는 친구 만나면 반가운 친구";
+        //split : 문자열을 seperator 기준으로 분리함
+        var words = str.split(" ");
+        
+        for(var i = 0; i<words.length; i++){
+            document.write(words[i] + "<br>");
+        }
+        
+        
+        for (var key in words){
+            document.write("<h3>[" + key +"] " + words[key] + " 좋아요</h3>");
+        }
+        
+        var str2 = "였다. 그러나 이젠 원수!";
+        document.write(str + str2 + "<br>");
+        document.write(str.concat(str2) + "<br>");  //concat - 문자열 2개를 붙여주다
+        document.write(str.includes("친") + "<br>");  //includes - 특정 문자를 포함하고 있는지!? 결과값 : true/false
+        
+        //includes를 사용하여 expression 연습
+        var sentence = "The quick brown fox jumped over the lazy dog";
+        var word = 'fox';
+
+        document.write(`The word "${word}" ${sentence.includes(word)? 'is': 'is not'} in the sentence`);
+        
+        
+    </script>
+</body>
+</html>
